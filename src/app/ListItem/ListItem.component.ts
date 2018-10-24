@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
     selector: 'app-list-item',
@@ -11,10 +11,6 @@ export class ListItemComponent implements OnInit {
     constructor() { }
 
     ngOnInit() {
-    }
-
-    updatePageContent() {
-        // TODO
     }
 
 }
