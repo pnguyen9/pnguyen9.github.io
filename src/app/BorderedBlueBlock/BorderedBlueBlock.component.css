@@ -5,6 +5,7 @@
 	border-radius: 10px;
 	padding: 1%;
 	border-image: url(/assets/images/border.png) 10 round;
+	overflow: hidden;
 }
 
 .middle-block {

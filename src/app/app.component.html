@@ -1,28 +1,8 @@
 <app-bordered-blue-block [blockPosition]='borderedBlueBlockType.MiddleBlock'>
-	<p>
-		This is a sample of a Final Fantasy 7 ingame menu, with blue blackground blocks with border.
-	</p>
-	<div>
-		The menu on the right isn't implemented yet. I will be implementing them in the order they're displayed
-	</div>
-	<p>
-		Coming soon: Summary
-	</p>
+	{{middleBlockBody}}
 </app-bordered-blue-block>
 <app-bordered-blue-block  [blockPosition]='borderedBlueBlockType.RightBlock'>
-	<app-list-item>
-		Summary
-	</app-list-item>
-	<app-list-item>
-		Experience
-	</app-list-item>
-	<app-list-item>
-		Education
-	</app-list-item>
-	<app-list-item>
-		Skills
-	</app-list-item>
-	<app-list-item>
-		Change language
+	<app-list-item *ngFor='let item of menuItemKeys()' (click)=onMenuItemClicked(item)>
+		{{menuItem[item]}}
 	</app-list-item>
 </app-bordered-blue-block>
