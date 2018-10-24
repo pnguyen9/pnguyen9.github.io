@@ -1,12 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { BorderedBlueBlockComponent } from './BorderedBlueBlock/BorderedBlueBlock.component';
+import { ListItemComponent } from './ListItem/ListItem.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    BorderedBlueBlockComponent,
+    ListItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -15,4 +19,5 @@ import { AppComponent } from './app.component';
   providers: [],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }

@@ -1,0 +1,24 @@
+.bordered-blue-block {
+	color: white;
+	background: linear-gradient(to bottom right, rgb(0, 0, 176), rgb(0, 0, 32));
+	border: 7px solid transparent;
+	border-radius: 10px;
+	padding: 1%;
+	border-image: url(/assets/images/border.png) 10 round;
+}
+
+.middle-block {
+	position: absolute;
+	float: left;
+	width: 60%;
+	margin: 4% 1% 4% 4%;
+	padding-right: 15%;
+	z-index: -1;
+}
+
+.right-block {
+	float: right;
+	width: 15%;
+	margin: 2% 4% 2% 1%;
+	z-index: 1;
+}
