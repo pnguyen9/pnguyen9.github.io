@@ -1,0 +1,11 @@
+{
+    "editor.formatOnSave": true,
+    "editor.autoIndent": true,
+    "editor.detectIndentation": false,
+    "editor.tabSize": 4,
+    "tslint.enable": true,
+    "tslint.run": "onType",
+    "tslint.autoFixOnSave": true,
+    "typescriptHero.imports.organizeOnSave": true,
+    "typescript.tsdk": "node_modules/typescript/lib",
+}
