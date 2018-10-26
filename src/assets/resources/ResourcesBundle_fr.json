@@ -1,0 +1,13 @@
+{
+    "label.changeLanguage": "Changer la langue",
+    "label.education": "Formation",
+    "label.experience": "Expériences",
+    "label.skills": "Compétences",
+    "label.selectedMenu": "Menu sélectionné: ",
+    "label.summary": "Résumé",
+    "label.language.english": "Anglais",
+    "label.language.french": "Français",
+    "text.sample": "Ceci est un échantillon d'un portfolio au style de Final Fantasy 7.",
+    "text.menuNotImplemented": "Le menu sur la droite n'est pas encore implémenté.",
+    "text.featuretoBeImplemented": "Les différentes fonctionnaltiés seront implémentées dans l'ordre dans lesquelles elles sont affichées."
+}

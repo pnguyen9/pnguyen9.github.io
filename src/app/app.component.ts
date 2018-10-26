@@ -1,14 +1,15 @@
-import { Component, ViewChild, OnInit, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 
-import { BorderedBlueBlockType, BorderedBlueBlockComponent } from './BorderedBlueBlock/BorderedBlueBlock.component';
+import { BorderedBlueBlockType } from './BorderedBlueBlock/BorderedBlueBlock.component';
+import { ResourcesService } from './resources.service';
 
 export enum MenuItem {
-    Summary = 'Summary',
-    Experience = 'Experience',
-    Education = 'Education',
-    Skills = 'Skills',
-    Change_Language = 'Change language',
+    Summary = 'label.summary',
+    Experience = 'label.experience',
+    Education = 'label.education',
+    Skills = 'label.skills',
+    Change_Language = 'label.changeLanguage',
 }
 
 @Component({
@@ -17,37 +18,32 @@ export enum MenuItem {
     styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
+export class AppComponent {
 
     private static DEFAULT_TITLE: string = 'Pascal Nguyen';
-
-    @Input() middleBlockBody: string;
 
     public borderedBlueBlockType = BorderedBlueBlockType;
     public menuItem = MenuItem;
 
-    public constructor(private titleService: Title ) {
+    // TODO: Delete once not needed anymore (e.g. when proper pages have been implemented)
+    public selectedMenuItem: MenuItem = MenuItem[MenuItem.Summary];
+
+    // TODO: Change resourcesServices visibility back to private once not needed anymore in app.component.html
+    public constructor(private titleService: Title, public resourcesService: ResourcesService) {
         titleService.setTitle(AppComponent.DEFAULT_TITLE);
     }
 
-    public ngOnInit(): void {
-        this.loadBodyBlock();
-    }
-
-    public loadBodyBlock(): void {
-        this.middleBlockBody =
-            `
-                This is a sample of a Final Fantasy 7 stylised portfolio.
-                The menu on the right isn't implemented yet. I will be implementing them in the order they're displayed.
-            `;
-    }
-
     public onMenuItemClicked(value: MenuItem) {
-        // TODO
-        switch (value) {
-            default:
-                this.middleBlockBody = `Clicked menu item: ${MenuItem[value]}`;
+        // TODO: Switch to different page when user is clicking a menu
+        // Perhaps I should implement actual pages instead of just changing the content of the body
+        switch (MenuItem[value]) {
+            case MenuItem.Change_Language:
+                // TODO: Implement a window so users can choose between the available locales
+                this.resourcesService.toggleLocale();
+                break;
         }
+
+        this.selectedMenuItem = value;
     }
 
     public menuItemKeys(): string[] {
