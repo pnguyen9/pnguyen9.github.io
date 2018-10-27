@@ -1,0 +1,10 @@
+<app-bordered-blue-block class='centered-floating-popup'>
+    <p class='body-text'>
+        {{resourcesService.getString(bodyLabel)}}
+    </p>
+    <app-list [selectableListOptions]='selectableListOptions' class='list-item'>
+    </app-list>
+    <p (click)="ok()" class='ok-button {{okButtonVisibility}}'>
+        {{resourcesService.getString('label.ok')}}
+    </p>
+</app-bordered-blue-block>

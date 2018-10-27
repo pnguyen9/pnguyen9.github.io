@@ -1,0 +1,24 @@
+.centered-floating-popup {
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 250px;
+    height: 125px;
+    z-index: 2;
+}
+
+.body-text, .list-item {
+    text-align: center;
+}
+
+.ok-button {
+    text-align: center;
+    display: none;
+}
+
+.visible {
+    display: block;
+}

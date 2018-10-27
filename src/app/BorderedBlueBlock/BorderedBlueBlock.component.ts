@@ -3,6 +3,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export enum BorderedBlueBlockType {
     MiddleBlock = 'middle-block',
     RightBlock = 'right-block',
+    Free = ''
 }
 
 @Component({
@@ -11,14 +12,11 @@ export enum BorderedBlueBlockType {
     styleUrls: ['./BorderedBlueBlock.component.css']
 })
 
-export class BorderedBlueBlockComponent implements OnInit {
+export class BorderedBlueBlockComponent {
 
-    @Input() blockPosition: BorderedBlueBlockType;
+    @Input() blockPosition: BorderedBlueBlockType = BorderedBlueBlockType.Free;
 
     constructor() {
-    }
-
-    ngOnInit(): void {
     }
 
 }
