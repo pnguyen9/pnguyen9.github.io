@@ -4,20 +4,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BorderedBlueBlockComponent } from './BorderedBlueBlock/BorderedBlueBlock.component';
-import { ListItemComponent } from './ListItem/ListItem.component';
+import { ListComponent } from './List/List.component';
+import { ListItemComponent } from './List/ListItem/ListItem.component';
+import { PopupComponent } from './Popup/Popup.component';
+import { PopupDirective } from './Popup/Popup.directive';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    BorderedBlueBlockComponent,
-    ListItemComponent,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    entryComponents: [
+        PopupComponent,
+    ],
+    declarations: [
+        AppComponent,
+        BorderedBlueBlockComponent,
+        ListComponent,
+        ListItemComponent,
+        PopupComponent,
+        PopupDirective,
+    ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 
 export class AppModule { }

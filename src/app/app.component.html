@@ -5,13 +5,9 @@
     <p>
         {{resourcesService.getString('text.menuNotImplemented')}}
     </p>
-    <p>
-        {{resourcesService.getString('label.selectedMenu')}}
-        {{resourcesService.getString(menuItem[selectedMenuItem])}}
-    </p>
 </app-bordered-blue-block>
 <app-bordered-blue-block [blockPosition]='borderedBlueBlockType.RightBlock'>
-    <app-list-item *ngFor='let item of menuItemKeys()' (click)=onMenuItemClicked(item)>
-        {{resourcesService.getString(menuItem[item])}}
-    </app-list-item>
+    <app-list [selectableListOptions]='selectableListOptions'>
+    </app-list>
 </app-bordered-blue-block>
+<ng-template appPopup></ng-template>

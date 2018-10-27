@@ -4,8 +4,8 @@ import * as Resources from '../assets/resources/ResourcesBundle.json';
 import * as Resources_fr from '../assets/resources/ResourcesBundle_fr.json';
 
 export enum Locale {
-    EN,
-    FR,
+    EN = 'label.language.english',
+    FR = 'label.language.french',
 }
 
 @Injectable({
@@ -20,15 +20,6 @@ export class ResourcesService {
 
     constructor() {
         this.setLocale(ResourcesService.DEFAULT_LOCALE);
-    }
-
-    // TODO: Delete this method once language selection has been properly implemented
-    public toggleLocale(): void {
-        if (this.currentLocale === Locale.FR) {
-            this.currentLocale = Locale.EN;
-        } else {
-            this.currentLocale = Locale.FR;
-        }
     }
 
     public setLocale(locale: Locale): void {
@@ -48,5 +39,9 @@ export class ResourcesService {
         }
 
         return resource;
+    }
+
+    public localesKeys(): string[] {
+        return Object.keys(Locale);
     }
 }
