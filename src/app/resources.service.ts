@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
-import * as Resources from '../assets/resources/ResourcesBundle.json';
-import * as Resources_fr from '../assets/resources/ResourcesBundle_fr.json';
+import Resources from '../assets/resources/ResourcesBundle.json';
+import Resources_fr from '../assets/resources/ResourcesBundle_fr.json';
 
 export enum Locale {
     EN = 'label.language.english',

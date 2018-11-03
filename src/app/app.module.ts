@@ -6,8 +6,10 @@ import { AppComponent } from './app.component';
 import { BorderedBlueBlockComponent } from './BorderedBlueBlock/BorderedBlueBlock.component';
 import { ListComponent } from './List/List.component';
 import { ListItemComponent } from './List/ListItem/ListItem.component';
+import { MenuComponent } from './Menu/Menu.component';
 import { PopupComponent } from './Popup/Popup.component';
 import { PopupDirective } from './Popup/Popup.directive';
+import { PopupFactoryComponent } from './PopupFactory/PopupFactory.component';
 
 @NgModule({
     entryComponents: [
@@ -18,8 +20,10 @@ import { PopupDirective } from './Popup/Popup.directive';
         BorderedBlueBlockComponent,
         ListComponent,
         ListItemComponent,
+        MenuComponent,
         PopupComponent,
         PopupDirective,
+        PopupFactoryComponent,
     ],
     imports: [
         BrowserModule,
